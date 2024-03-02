@@ -1,3 +1,51 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -5,23 +53,191 @@
     height: 100vh;
 }
 
-
-
 .sidebar {
-    background-color: red;
+    background-color: rgb(14, 128, 205); 
     grid-column: 1;
     grid-row: 1 / span 2;
 }
 
+.sidebar .logo {
+    font-size: xx-large;
+    color: white;
+}
+
+.general-menu ul, .help-menu ul {
+    list-style-type: none;
+    font-size: larger;
+    color: white;
+    list-style: none;
+}
+
+.general-menu li, .help-menu li {
+    padding: 10px;
+}
+
+.general-menu {
+    margin-bottom: 50px;
+}
+.general-menu ul li button,
+.help-menu ul li button{
+    display: flex;
+    align-items: center;
+    background-color: rgb(14, 128, 205); 
+    border: none;
+    color: white;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 500px;
+    background-color: rgb(157,160,167);
+    
+}
+
+.profile-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.larger-profile-icon img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
+
+/* .header-top, .header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
 .header {
-    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.header-left {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-rows: 100px 100px;
+}
+
+.header-left .search {
+    grid-row: 1;
+}
+
+.header-left .bottom {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    padding-left: 25px;
+}
+
+.header-right {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+}
+
+.header-right .top {
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-right: 25px;
+
+}
+
+.header-right .bottom {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 25px;
+}
+
+.welcome {
+    padding-top: 10px;
+}
+
+.welcome-name {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.material-symbols-outlined {
+    margin-right: 5px; 
+    align-items: center;
+   
+}
+
+
+.header {
+    background-color: rgb(191	191	191	);
     grid-column: 2;
     grid-row: 1;
 }
 
 .content {
-    background-color: green;
+    background-color: rgb(157,160,167);
     grid-column: 2;
-    grid-row:2;
-    grid
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 }
+
+.new-button, .share-button, .upload-button {
+    background-color: rgb(14, 128, 205); 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 30px 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 25px;
+}
+
+.projects-header {
+    grid-column: 1 / -1; /* Adjust as needed */
+    font-size: x-large;
+}
+
